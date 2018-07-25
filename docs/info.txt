@@ -1,0 +1,3 @@
+https://changhsinlee.com/install-pyspark-windows-jupyter/
+https://mas-dse.github.io/DSE230/installation/windows/
+https://www.dezyre.com/apache-spark-tutorial/pyspark-tutorial

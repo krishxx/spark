@@ -9,8 +9,9 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("My App")
 sc = SparkContext(conf = conf)
 
-textFile = sc.read.text("readme.txt")
-textFile.count()
-textFile.first()
-linesWithSpark = textFile.filter(textFile.value.contains("Spark"))
-textFile.filter(textFile.value.contains("Spark")).count()  # How many lines contain "Spark"?
+lines = sc.textFile("D:\\projects\\machinelearning\\mltutor\\spark\\src\\readme.txt")
+lines.first()
+pythonLines = lines.filter(lambda line: "Python" in line)
+pythonLines.first()
+
+sc.stop()
